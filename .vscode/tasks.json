@@ -9,7 +9,7 @@
         "-g",
         "-o",
         "${workspaceFolder}/out/helloworld",
-        "helloworld.cpp"
+        "helloworld.c"
       ],
       "group": {
         "kind": "build",
