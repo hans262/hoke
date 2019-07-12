@@ -1,15 +1,5 @@
 #include <stdio.h>
 
-/**
- * 指针
- * 每一个变量都有一个内存位置
- * 可使用连字号（&）访问变量的内存地址
- * 
- * 指针含义：
- * 指针是一个变量，其值为另一个变量的地址，内存位置的直接地址。
- * type *var-name;
- */
-
 void demo()
 {
   //访问变量的地址
@@ -48,6 +38,16 @@ void demo3()
 
 int main()
 {
-  demo3();
+  int arr[] = {5, 6, 7, 8, 9};
+  int i, *p;
+  p = &arr[0];
+
+  for (i = 0; i < 5; i++)
+  {
+    printf("arr[%d] = %d\n", i, *p);
+    printf("arr[%d] = %p\n", i, p);
+    //位移指针
+    p++;
+  }
   return 0;
 }

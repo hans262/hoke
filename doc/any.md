@@ -4,7 +4,8 @@
   %f float
   %ld long
   %c char
-  %p
+  %p 指针
+  %s 字符串
 ```
 
 ## 字符型
