@@ -17,9 +17,6 @@
   有符号型 signed
     包含负数，声明变量时默认为有符号型
     pow(2, sizeof(int) * 8)/2 * -1 ~ pow(2, sizeof(int) * 8)/2 - 1
-  
-  空类型
-    void
 ```
 
 ## 类型强转
