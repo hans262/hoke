@@ -1,5 +1,10 @@
 {
   "files.associations": {
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "stdio.h": "c",
+    "print.h": "c",
+    "cstdio": "c",
+    "math.h": "c",
+    "windows.h": "c"
   }
 }
