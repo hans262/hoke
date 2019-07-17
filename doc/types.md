@@ -32,6 +32,7 @@
   %d int
   %f float
   %ld long
+  %lld long long
   %c char
   %p 指针
   %s 字符串
