@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * typedef -> 类型别名
+ * 类型别名 -> typedef
  * 自定义一个类型
  */
 

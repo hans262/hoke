@@ -5,6 +5,7 @@
     "print.h": "c",
     "cstdio": "c",
     "math.h": "c",
-    "windows.h": "c"
+    "windows.h": "c",
+    "sstream": "c"
   }
 }

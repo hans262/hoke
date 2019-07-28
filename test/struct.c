@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * struct -> 结构体
+ * 结构体 -> struct
  * 用来存储键值对的数据类型
  * 
  */

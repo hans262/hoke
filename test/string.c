@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * 字符串 ->
+ * 
+ */
 int main()
 {
   char hello[6] = {'h', 'e', 'l', 'l', 'o', '\0'};
