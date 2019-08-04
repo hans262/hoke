@@ -42,6 +42,9 @@
   %o 八进制
   %x 十六进制
   %% 百分号
+
+  %u unsigned int
+  %lu unsigned long
 ```
 
 ### 构造类型

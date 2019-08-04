@@ -1,26 +1,28 @@
 #include <stdio.h>
 #include <time.h>
-
-long long test(int num)
+/**
+ * 斐波那契数列 递归测试
+ */
+unsigned long fibonacci(int num)
 {
-  if (num <= 2)
+  if (num > 2)
   {
-    return 1;
+    return fibonacci(num - 1) + fibonacci(num - 2);
   }
   else
   {
-    return test(num - 1) + test(num - 2);
+    return 1;
   }
 }
 
 main()
 {
   clock_t start, end;
-  long long ret;
+  unsigned long ret;
   start = clock();
-  ret = test(40);
+  ret = fibonacci(45);
   end = clock();
 
-  printf("ret = %lld\n", ret);
+  printf("ret = %lu\n", ret);
   printf("time = %ld\n", end - start);
 }
