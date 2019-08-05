@@ -10,7 +10,7 @@
         "-g",
         "-o",
         "${workspaceFolder}/out/app",
-        "main.c"
+        "main.cpp"
       ],
       "group": {
         "kind": "build",

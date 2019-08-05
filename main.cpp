@@ -2,6 +2,8 @@
 #include <time.h>
 /**
  * 斐波那契数列 递归测试
+ * 40 403ms
+ * 45 4400s
  */
 unsigned long fibonacci(int num)
 {
@@ -17,12 +19,13 @@ unsigned long fibonacci(int num)
 
 main()
 {
+  int fib = 45;
   clock_t start, end;
   unsigned long ret;
   start = clock();
-  ret = fibonacci(45);
+  ret = fibonacci(fib);
   end = clock();
 
-  printf("ret = %lu\n", ret);
+  printf("fib %d = %lu\n", fib, ret);
   printf("time = %ld\n", end - start);
 }
