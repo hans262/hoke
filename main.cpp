@@ -1,31 +1,10 @@
-#include <stdio.h>
-#include <time.h>
-/**
- * 斐波那契数列 递归测试
- * 40 403ms
- * 45 4400s
- */
-unsigned long fibonacci(int num)
-{
-  if (num > 2)
-  {
-    return fibonacci(num - 1) + fibonacci(num - 2);
-  }
-  else
-  {
-    return 1;
-  }
-}
+#include <iostream>
+using namespace std;
+#include "./lib/test.h"
 
-main()
+int main(int argc, char const *argv[])
 {
-  int fib = 45;
-  clock_t start, end;
-  unsigned long ret;
-  start = clock();
-  ret = fibonacci(fib);
-  end = clock();
 
-  printf("fib %d = %lu\n", fib, ret);
-  printf("time = %ld\n", end - start);
+  test();
+  return 0;
 }

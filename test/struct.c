@@ -20,6 +20,7 @@ int main()
       "Brian W. Kernighan",
       "全面、系统地讲述了C语言的各个特性及程序设计的基本方法",
       9787111128069};
+
   //普通获取
   printf("title : %s\n", book.title);
   printf("author: %s\n", book.author);
