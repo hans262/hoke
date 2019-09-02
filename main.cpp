@@ -1,41 +1,29 @@
 #include <iostream>
+#include <stdio.h>
 #include <vector>
 using namespace std;
 
-int main(int argc, char const *argv[])
+/**
+ * 指针 ->
+ * 
+ * &var 取内存地址
+ * *p 取地址上的值
+ * 
+ * 
+*/
+
+int main()
 {
-  //动态分配的数组
-  vector<string> arr{"Hello", "C++", "World", "from", "VS Code!"};
-  arr.push_back("huahua");
+  int num = 10;
+  //赋值指针
+  int *p = &num;
 
-  //遍历数组 赋值给word，取word的内存地址
-  for (const string &word : arr)
-  {
-    cout << word << " ";
-  }
-  cout << endl;
+  cout << p << endl;
+  cout << *p << endl;
 
-  cout << arr.size() << endl;
-  cout << arr[0] << endl;
-
-  struct Info
-  {
-    int moth;
-    int base[5];
-  };
-
-  vector<Info> arr2;
-
-  for (int i = 0; i < 12; i++)
-  {
-    struct Info info = {i + 1, {20, 15, 30, 40, 65}};
-    arr2.push_back(info);
-  }
-
-  for (const Info &bbw : arr2)
-  {
-    cout << bbw.base[2] << " ";
-  }
+  //数组指针
+  int arr[3]{5, 6, 7};
+  cout << *(arr + 0) << *(arr + 1) << *(arr + 2) << endl;
 
   return 0;
 }
