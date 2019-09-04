@@ -12,12 +12,9 @@ using namespace std;
 
 int main()
 {
-
   const int num = 25;
-
   //num = 26; throw error
 
   cout << num << endl;
-
   return 0;
 }

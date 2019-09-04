@@ -11,11 +11,9 @@ using namespace std;
 
 int main()
 {
-
   auto num = 25;
   auto str = "hello";
 
   cout << str << endl;
-
   return 0;
 }

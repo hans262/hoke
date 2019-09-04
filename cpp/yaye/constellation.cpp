@@ -13,19 +13,12 @@ using namespace std;
 */
 int main(int argc, char const *argv[])
 {
-  string father_name, daughter_name;
-  int birth_month, birth_date;
+  string name;
+  int month, date;
   //星座
-  string daughter_constell;
+  string constellation;
 
-  //基本信息 体力、智力、魅力、道德、气质
-  int baseinfo[5];
-  
-  struct bbb
-  {
-    short tl;
-  };
-  
+  //数据库
   string constells[12][2] = {
       {"山羊座", "水瓶座"}, //一月
       {"水瓶座", "双鱼座"}, //二月
@@ -45,19 +38,19 @@ int main(int argc, char const *argv[])
 
   //输入
   cout << "姓名：";
-  cin >> daughter_name;
+  cin >> name;
   cout << "生日(MM DD)：";
-  cin >> birth_month >> birth_date;
+  cin >> month >> date;
 
   //计算
-  int index = (birth_date - constell_dates[birth_month - 1]) >= 0 ? 1 : 0;
-  daughter_constell = constells[birth_month - 1][index];
+  int index = (date - constell_dates[month - 1]) >= 0 ? 1 : 0;
+  constellation = constells[month - 1][index];
 
   //输出
   cout << "个人信息：" << endl;
-  cout << "姓名：" << daughter_name << endl;
-  cout << "生日：" << birth_month << "-" << birth_date << endl;
-  cout << "星座：" << daughter_constell << endl;
+  cout << "姓名：" << name << endl;
+  cout << "生日：" << month << "-" << date << endl;
+  cout << "星座：" << constellation << endl;
 
   return 0;
 }

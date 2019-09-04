@@ -1,20 +1,24 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 /**
- * 结构体 -> struct
+ * struct ->
+ * 结构体
+ * 
+ * typedef ->
+ * 类型别名
  * 
 */
-struct Point
+
+typedef struct Point
 {
   int x;
   int y;
   std::string describe;
-  struct Point add(Point p)
+  Point add(Point p)
   {
-    struct Point ret;
+    Point ret;
     ret.x = this->x + p.x;
     ret.y = this->y + p.y;
     return ret;
@@ -23,23 +27,16 @@ struct Point
 
 int main()
 {
-  struct Point a
-  {
-    10, 10
-  };
+  Point a{10, 10};
+  Point b{20, 30};
 
-  struct Point b
-  {
-    20, 30
-  };
-
-  struct Point c = a.add(b);
+  Point c = a.add(b);
   c.describe = "点";
 
   cout << c.y << endl;
 
   //结构体指针
-  struct Point *p = &c;
+  Point *p = &c;
   cout << p->describe << endl;
 
   return 0;
