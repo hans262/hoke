@@ -1,12 +1,13 @@
 #include <iostream>
+#include <map>
 using namespace std;
-#include "h/pt.h"
 
-int main()
+main()
 {
+  map<string, string> m;
 
-  int arr[5] = {9, 10, 45, 96};
-  print_array(arr);
+  m["01"] = "huahua";
+  m["02"] = "goudan";
 
-  return 0;
+  cout << m["01"] << endl;
 }

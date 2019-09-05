@@ -46,6 +46,8 @@
     "thread": "cpp",
     "ctime": "cpp",
     "chrono": "cpp",
-    "iomanip": "cpp"
+    "iomanip": "cpp",
+    "list": "cpp",
+    "ratio": "cpp"
   }
 }

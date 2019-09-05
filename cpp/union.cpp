@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <iostream>
 #include <string.h>
+using namespace std;
+
 /**
  * 共用体 ->
  * 存储不同类型数据
@@ -18,14 +21,15 @@ main()
   };
 
   union Data data;
-  // printf("%d", sizeof(data));
+  unsigned int len = sizeof(data);
+  cout << len << endl;
 
   data.i = 10;
-  printf("data.i = %d\n", data.i);
+  cout << "data.i = " << data.i << endl;
 
   data.f = 3.141592;
   printf("data.f = %f\n", data.f);
 
   strcpy(data.str, "hello world");
-  printf("data.str = %s\n", data.str);
+  cout << "data.str = " << data.str << endl;
 }

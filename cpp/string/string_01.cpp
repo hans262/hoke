@@ -14,7 +14,7 @@ int main()
   cout << str1 << endl;
 
   //获取长度
-  int len = str1.size();
+  unsigned int len = str1.size();
   cout << len << endl;
 
   //查找
