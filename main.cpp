@@ -1,13 +1,11 @@
 #include <iostream>
-#include <map>
+#include <stdio.h>
 using namespace std;
 
 main()
 {
-  map<string, string> m;
-
-  m["01"] = "huahua";
-  m["02"] = "goudan";
-
-  cout << m["01"] << endl;
+  printf("%lf\n", 19.9 * 100);
+  printf("%lf\n", 1989.99999998 / 100);
+  printf("%lf\n", 4.9 * 100);
+  printf("%lf\n", 490.0000006 / 100);
 }
