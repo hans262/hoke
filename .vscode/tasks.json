@@ -6,7 +6,6 @@
       "type": "shell",
       "command": "g++",
       "args": [
-        "-std=c++11",
         "-fexec-charset=GBK",
         "-g",
         "-o",

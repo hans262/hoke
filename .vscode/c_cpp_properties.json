@@ -8,6 +8,8 @@
       ],
       "compilerPath": "C:/Users/cloud-5/Downloads/mingw64/bin/g++.exe",
       "intelliSenseMode": "gcc-x64",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
       "browse": {
         "path": [
           "${workspaceFolder}"
