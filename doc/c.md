@@ -1,5 +1,10 @@
 # C
-mingw为gcc的windows版本
+
+MinGW为gcc的windows版本
+MinGW 只能编译生成32位可执行程序
+
+MinGW 现已被 MinGW-w64 所取代
+
 
 ## 安装 Mingw-w64
 ```

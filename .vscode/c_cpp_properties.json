@@ -6,6 +6,9 @@
         "_DEBUG",
         "UNICODE"
       ],
+      "includePath": [
+        "C:/Users/cloud-5/Downloads/mingw64/lib/**"
+      ],
       "compilerPath": "C:/Users/cloud-5/Downloads/mingw64/bin/g++.exe",
       "intelliSenseMode": "gcc-x64",
       "cStandard": "c11",

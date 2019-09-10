@@ -1,9 +1,11 @@
 #ifndef MY_H_INCLUDED
 #define MY_H_INCLUDED
+
 #include <iostream>
 using namespace std;
 
-void print_array(int *p)
+template <typename T>
+void print(T *p)
 {
   cout << "[";
   while (*p)
