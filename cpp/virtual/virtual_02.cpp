@@ -3,17 +3,17 @@ using namespace std;
 
 /**
  * virtual
- * 虚函数
+ * 纯虚函数
+ * 
+ * 派生类中必须予以重写以实现多态性
+ * 含有纯虚拟函数的类称为抽象类，它不能生成对象。
  * 
 */
 
 class A
 {
 public:
-  virtual void foo()
-  {
-    cout << "A: foo" << endl;
-  }
+  virtual void foo() = 0;
 };
 
 class B : public A
@@ -29,4 +29,5 @@ main()
 {
   A *a = new B();
   a->foo();
+  
 }

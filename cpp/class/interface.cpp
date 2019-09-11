@@ -2,14 +2,17 @@
 using namespace std;
 
 /**
- * 继承
- * 派生类:基类
+ * interface
+ * 接口(抽象类)
  * 
 */
 
+//基类
 class Shape
 {
 public:
+  //抽象方法
+  virtual int getArea() = 0;
   void setWidth(int w)
   {
     this->width = w;
@@ -24,6 +27,7 @@ protected:
   int height;
 };
 
+//派生类
 class Rectangle : public Shape
 {
 public:
@@ -35,16 +39,12 @@ public:
 
 main()
 {
-  //动态创建内存
-  Rectangle *Rect = new Rectangle();
+  Rectangle *rect = new Rectangle;
 
-  Rect->setWidth(20);
-  Rect->setHeight(10);
-
-  int area = Rect->getArea();
-
+  rect->setHeight(10);
+  rect->setWidth(20);
+  int area = rect->getArea();
   cout << area << endl;
 
-  //释放内存
-  delete Rect;
+  delete rect;
 }
