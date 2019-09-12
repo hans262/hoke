@@ -29,3 +29,9 @@ MinGW 现已被 MinGW-w64 所取代
   调试 -> F5
   
 ```
+
+## mingw32-make
+```
+  mingw32-make build
+  mingw32-make clean
+```

@@ -9,7 +9,7 @@
         "-fexec-charset=GBK",
         "-g",
         "-o",
-        "${workspaceFolder}/out/app",
+        "${workspaceFolder}/app",
         "main.cpp"
       ],
       "group": {
