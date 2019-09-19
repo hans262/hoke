@@ -6,6 +6,7 @@
       "type": "shell",
       "command": "g++",
       "args": [
+        "-lws2_32",
         "-fexec-charset=GBK",
         "-g",
         "-o",
