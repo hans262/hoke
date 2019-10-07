@@ -1,9 +1,13 @@
-JC = g++
-ARGS = -g -fexec-charset=GBK
-TARGET = main.cpp
+GCC := g++
+SOURCE := main.cpp
+OUTPUT := app.exe
+ARGS := -g -fexec-charset=GBK
 
-build:
-	$(JC) $(ARGS) -o app $(TARGET)
+build: $(SOURCE)
+	$(GCC) $(ARGS) -o $(OUTPUT) $(SOURCE)
 
 clean:
-	$(RM) app.exe
+	rm *.exe
+
+run:
+	./app

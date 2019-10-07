@@ -31,4 +31,13 @@
 ```
   mingw32-make build
   mingw32-make clean
+  mingw32-make run
+
+  赋值
+  
+  =     变量的值将会是整个makefile中最后被指定的值。
+  :=    表示变量的值决定于它在makefile中的位置
+  ?=    是如果没有被赋值过就赋予等号后面的值
+  +=    是添加等号后面的值
+
 ```

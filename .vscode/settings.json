@@ -49,6 +49,10 @@
     "iomanip": "cpp",
     "list": "cpp",
     "ratio": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "future": "cpp",
+    "condition_variable": "cpp",
+    "cstring": "cpp",
+    "mutex": "cpp"
   }
 }
