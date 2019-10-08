@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdio.h>
 #include <thread>
 #include <future>
 using namespace std;
@@ -11,18 +10,17 @@ int factorial(shared_future<int> f)
   int n = f.get();
   for (int i = 2; i <= n; i++)
     ret *= i;
-  cout << "result is: " << ret << endl;
   return ret;
 }
 
 /**
  * shared_future
- * 多线程传值
+ * 共享的future
+ * 
 */
 
 main()
 {
-  //传值
   promise<int> p;
   future<int> f = p.get_future();
   shared_future<int> sf = f.share();
@@ -32,6 +30,6 @@ main()
   future<int> fu2 = async(launch::async, factorial, sf);
   p.set_value(5);
 
-  cout << fu.get() << endl;
-  cout << fu2.get() << endl;
+  cout << "fu result is: " << fu.get() << endl;
+  cout << "fu2 result is: " << fu2.get() << endl;
 }

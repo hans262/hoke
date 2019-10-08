@@ -1,21 +1,19 @@
 #include <iostream>
-#include <stdio.h>
 #include <thread>
-
 using namespace std;
+
 /**
  * thread ->
- * 多线程
+ * 多线程 基础案例
+ * 
  * 任务开启竞争模式，不按顺序执行
  * 
 */
 
-void go(void)
+void go()
 {
-  for (int i = 0; i < 3; i++)
-  {
-    cout << "hello " << i << endl;
-  }
+  thread::id id = this_thread::get_id();
+  cout << "From: " << id << ", hello" << endl;
 }
 
 main()

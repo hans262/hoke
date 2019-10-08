@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdio.h>
 #include <thread>
 #include <future>
 using namespace std;
@@ -11,19 +10,12 @@ int factorial(future<int> &f)
   int n = f.get();
   for (int i = 2; i <= n; i++)
     ret *= i;
-  cout << "result is: " << ret << endl;
   return ret;
 }
 
 /**
- * promise
- * 多线程传值
- * 传递引用
- * 
- * launch::async 在调用async就开始创建线程。
- * 
- * launch::deferred 惰性求值 延迟加载方式创建线程。
- * 调用async时不创建线程，直到调用了future的get或者wait时才创建线程。
+ * promise future
+ * 多线程传值 传递引用
  * 
 */
 
@@ -36,5 +28,6 @@ main()
   future<int> fu = async(launch::async, factorial, ref(f));
   p.set_value(5);
   
-  cout << fu.get() << endl;
+  int ret = fu.get();
+  cout << "result is: " << ret << endl;
 }
