@@ -11,8 +11,7 @@
         "-g",
         "-o",
         "${workspaceFolder}/app",
-        "main.cpp",
-        "-static"
+        "main.cpp"
       ],
       "group": {
         "kind": "build",

@@ -1,11 +1,12 @@
-#include <stdio.h>
 #include <iostream>
 using namespace std;
 
 /**
  * 位域 ->
- * 在存储时，并不需要占用一个完整的字节
- * 而只需占几个或一个二进制位
+ * 
+ * char = 1字节 int = 4字节
+ * 在定义一个变量时，并不需要占用一个完整的字节
+ * 而只需几个二进制位的时候，可以使用位域
  * 
  */
 
@@ -13,18 +14,17 @@ main()
 {
   struct
   {
-    int width;
-    int height;
-  } wd;
-  struct
-  {
-    int width : 2;  //占用2个二进制位 -2 ~ 1
-    int height : 4; //占用4个二进制位 -8 ~ 7
-  } wd2;
+    unsigned int age : 3;
+    //三个二进制位，取值范围为十进制表示法：0 ~ 2 ** 3 - 1
+    // 即 0 ~ 7
+  } Tom;
 
-  printf("%d\n", sizeof(wd));
-  printf("%d\n", sizeof(wd2));
+  Tom.age = 7;
+  //7的二进制为111
+  cout << Tom.age << endl;
 
-  wd2.height = 7;
-  cout << wd2.height << endl;
+  Tom.age = 8;
+  //8的二进制为1000，超出三个二进制位空间
+  //此时发生内存溢出情况，丢弃首位变成000，即age = 0
+  cout << Tom.age << endl;
 }

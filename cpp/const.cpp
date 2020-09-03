@@ -1,20 +1,27 @@
 #include <iostream>
-#include <vector>
-
+#include <math.h>
 using namespace std;
 
 /**
- * const
- * 常量定义符
- * 无法被再次赋值
+ * 常量
+ * 
+ * 常量是固定值，常量的值在定义后不能进行修改。
+ * 这些固定的值，又叫做字面量。
+ * 常量可以是任何的基本数据类型
+ * 定义常量可是使用const关键字
  * 
 */
 
-int main()
+main()
 {
-  const int num = 25;
-  //num = 26; throw error
+  const double PI = 3.1415926;
+  const int RADIUS = 5;
+  const char NEWLINE = '\n';
+  double area;
+  
+  area = PI * pow(RADIUS, 2);
 
-  cout << num << endl;
-  return 0;
+  cout << area;
+  cout << NEWLINE;
+  cout << "done";
 }

@@ -62,3 +62,21 @@
   %u unsigned int
   %lu unsigned long
 ```
+
+
+## 类型强转
+```
+  (type_name) expression
+
+  例子：
+  int sum = 17, count = 5;
+  double mean;
+  mean = (double)sum / (double)count;
+  printf("%f", mean);
+```
+
+## 常量
+```
+  程序执行过程中，其值不发生改变
+  #define 名称 值
+```

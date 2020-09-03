@@ -4,14 +4,14 @@ using namespace std;
 
 /**
  * sizeof ->
- * 求变量内存大小
+ * 求变量内存占用的字节数
  * 
- * 取值范围
- * 2的 所占bit位次方 的变化范围
- * 
+ * 求十进制取值范围
+ * 2的所占bit位的变化范围 = 2的bit位次幂
+ * 2 ** (sizeof(int) * 8)
  */
 
-int main()
+main()
 {
   int min, max;
   int size = sizeof(int);
@@ -22,6 +22,4 @@ int main()
 
   cout << size << endl;
   cout << min << " ~ " << max << endl;
-
-  return 0;
 }

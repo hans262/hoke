@@ -1,5 +1,4 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
 
 /**
@@ -9,7 +8,7 @@ using namespace std;
  * 
  */
 
-int main()
+main()
 {
   enum Size
   {
@@ -21,5 +20,4 @@ int main()
 
   enum Size size = X;
   cout << size << endl;
-  return 0;
 }
