@@ -11,3 +11,6 @@ clean:
 
 run:
 	./app
+
+pull:
+	git pull https://github.com.cnpmjs.org/ounana/hoke.git
