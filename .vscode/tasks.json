@@ -4,41 +4,42 @@
     {
       "type": "shell",
       "label": "clang++ build",
-      "command": "/usr/bin/clang++",
+      "command": "clang++",
       "args": [
         "-std=c++17",
         "-stdlib=libc++",
         "-g",
         "main.cpp",
         "-o",
-        "${workspaceFolder}/a.out"
+        "a.out"
       ],
-      "options": {
-        "cwd": "${workspaceFolder}"
+      "group": {
+        "kind": "build",
+        "isDefault": true
       },
       "problemMatcher": [
         "$gcc"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      ]
     },
     {
-      "label": "g++ build",
       "type": "shell",
+      "label": "g++ build",
       "command": "g++",
       "args": [
+        "-std=c++17",
+        "-stdlib=libc++",
         "-g",
         "main.cpp",
         "-o",
-        "${workspaceFolder}/a.exe"
+        "a.exe"
       ],
       "group": {
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": []
+      "problemMatcher": [
+        "$gcc"
+      ]
     }
   ]
 }

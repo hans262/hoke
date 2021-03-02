@@ -1,13 +1,14 @@
 GCC := g++
 SOURCE := main.cpp
-OUTPUT := app.exe
-ARGS := -g -fexec-charset=GBK -static
+OUTPUT := a.out
+ARGS := -g -std=c++17 -stdlib=libc++
 
 build: $(SOURCE)
 	$(GCC) $(ARGS) -o $(OUTPUT) $(SOURCE)
 
 clean:
-	rm *.exe
+	rm *.out
+	rm -rf *.dSYM
 
 run:
-	./app
+	./a.out
