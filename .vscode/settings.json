@@ -1,4 +1,5 @@
 {
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium }",
   "files.associations": {
     "ostream": "cpp",
     "stdio.h": "c",
@@ -53,6 +54,29 @@
     "future": "cpp",
     "condition_variable": "cpp",
     "cstring": "cpp",
-    "mutex": "cpp"
+    "mutex": "cpp",
+    "__bit_reference": "cpp",
+    "__config": "cpp",
+    "__debug": "cpp",
+    "__errc": "cpp",
+    "__functional_base": "cpp",
+    "__hash_table": "cpp",
+    "__locale": "cpp",
+    "__mutex_base": "cpp",
+    "__node_handle": "cpp",
+    "__nullptr": "cpp",
+    "__split_buffer": "cpp",
+    "__string": "cpp",
+    "__threading_support": "cpp",
+    "__tuple": "cpp",
+    "bit": "cpp",
+    "bitset": "cpp",
+    "complex": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "locale": "cpp",
+    "stack": "cpp",
+    "__functional_03": "cpp",
+    "filesystem": "cpp"
   }
 }

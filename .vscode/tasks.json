@@ -2,21 +2,44 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build",
       "type": "shell",
-      "command": "g++",
+      "label": "clang++ build",
+      "command": "clang++",
       "args": [
-        "-lws2_32",
-        "-fexec-charset=GBK",
+        "-std=c++17",
+        "-stdlib=libc++",
         "-g",
+        "main.cpp",
         "-o",
-        "${workspaceFolder}/app",
-        "main.cpp"
+        "a.out"
       ],
       "group": {
         "kind": "build",
         "isDefault": true
-      }
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "g++ build",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "-stdlib=libc++",
+        "-g",
+        "main.cpp",
+        "-o",
+        "a.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
     }
   ]
 }

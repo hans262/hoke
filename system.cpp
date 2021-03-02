@@ -139,7 +139,7 @@ void showAll()
   }
 }
 
-main()
+int main()
 {
   printmenu();
   string data;

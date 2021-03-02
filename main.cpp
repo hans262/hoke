@@ -1,30 +1,26 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
 
-struct Student
-{
+struct Student {
   string name;
   string age;
   string stuNumber;
 };
 
-vector<Student> getAllStudent()
-{
+vector<Student> getAllStudent() {
   string data;
   vector<Student> student;
   //查询学生数据
   ifstream readstream;
   readstream.open("./public/b.txt", ios::in);
-  while (getline(readstream, data))
-  {
+  while (getline(readstream, data)) {
     string line = data;
     string s[3];
     int index, len, id = 0;
-    while ((index = line.find("-")) != string::npos)
-    {
+    while ((index = line.find("-")) != string::npos) {
       string result;
       len = line.length();
       result = line.substr(0, index);
@@ -41,8 +37,7 @@ vector<Student> getAllStudent()
   return student;
 }
 
-void printmenu()
-{
+void printmenu() {
   cout << "1.录入学生信息（姓名、年龄）" << endl;
   cout << "2.显示学生信息" << endl;
   cout << "3.修改学生信息（根据学号修改）" << endl;
@@ -50,8 +45,7 @@ void printmenu()
 }
 
 //录入
-void add()
-{
+void add() {
   string name, age, stuNumber;
   //学号规则，自增，永不相同
   //获取最后一个学号 自增
@@ -75,8 +69,7 @@ void add()
   cout << "Enter done!" << endl;
 }
 //修改
-void update()
-{
+void update() {
   string id, name, age;
   cout << "请要修改输入学号: ";
   getline(cin, id);
@@ -84,16 +77,13 @@ void update()
   vector<Student> student = getAllStudent();
   //获取所有学号
   bool isExist = false;
-  for (const Student &s : student)
-  {
-    if (s.stuNumber == id)
-    {
+  for (const Student& s : student) {
+    if (s.stuNumber == id) {
       isExist = true;
     }
   }
 
-  if (isExist)
-  {
+  if (isExist) {
     cout << "学号存在，可以修改" << endl;
     //重新组建集合 然后写入文件
 
@@ -103,10 +93,8 @@ void update()
     cout << "Enter age: ";
     getline(cin, age);
 
-    for (Student &s : student)
-    {
-      if (s.stuNumber == id)
-      {
+    for (Student& s : student) {
+      if (s.stuNumber == id) {
         s.age = age;
         s.name = name;
       }
@@ -116,55 +104,40 @@ void update()
     ofstream writestream;
     writestream.open("./public/b.txt", ios::out);
     // writestream << name << "-" << age << "-" << stuNumber << "-" << endl;
-    for (const Student &s : student)
-    {
-      writestream << s.name << "-" << s.age << "-" << s.stuNumber << "-" << endl;
+    for (const Student& s : student) {
+      writestream << s.name << "-" << s.age << "-" << s.stuNumber << "-"
+                  << endl;
     }
     writestream.close();
     cout << "修改成功!" << endl;
-  }
-  else
-  {
+  } else {
     cout << "学号不存在，不能修改" << endl;
   }
 }
 
-void showAll()
-{
+void showAll() {
   vector<Student> student = getAllStudent();
   cout << "====学生数据====" << endl;
-  for (const Student &s : student)
-  {
+  for (const Student& s : student) {
     cout << s.name << "-" << s.age << "-" << s.stuNumber << endl;
   }
 }
 
-main()
-{
+int main() {
   printmenu();
   string data;
 
-  while (getline(cin, data))
-  {
-    if (data == "1")
-    {
+  while (getline(cin, data)) {
+    if (data == "1") {
       add();
-    }
-    else if (data == "2")
-    {
+    } else if (data == "2") {
       showAll();
-    }
-    else if (data == "3")
-    {
+    } else if (data == "3") {
       update();
-    }
-    else if (data == "5")
-    {
+    } else if (data == "5") {
       cout << "exit" << endl;
       return 0;
-    }
-    else
-    {
+    } else {
       printmenu();
     }
   }
