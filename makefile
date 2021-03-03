@@ -16,7 +16,10 @@ clean:
 	rm -rf *.dSYM
 
 run:
-	./a
+	./a.out
+
+win_run:
+	./a.exe
 
 pull:
 	git pull https://github.com.cnpmjs.org/ounana/hoke.git
