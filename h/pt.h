@@ -5,8 +5,7 @@
 using namespace std;
 
 template <typename T>
-void print(T *p)
-{
+void print(T* p) {
   cout << "[";
   while (*p)
     cout << *(p++) << ", ";
